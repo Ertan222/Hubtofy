@@ -13,17 +13,17 @@
 - Razor Pages: Paged-focused project type for building dynamic websites
 - MongoDB: A NoSQL database for storing data in documents.
 
-# Code of Conduct
+# Code of Conduct :heart:
 
 Hubtoy have a CoC. Can be find [here](./LICENSE)
 
-# License 
+# License 📄
 
 Hubtofy is under MIT license. Can be find [here](./LICENSE)
 
 
-# Contribution
+# Contribution 🤝
 
-Openin PR or/and issue is valuable to me :smile:
+Contribute to Hubtofy is easy and simple. Can be find [here](./CONTRIBUTING.md)
 
 <!-- How to use it? -->
