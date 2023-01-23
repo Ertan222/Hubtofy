@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PQHOkGg7dXW86jm1iYi4mKWYcos77SGV7jYJdChY8C1CKgdCTQJoxi1p+fVk5RdQ6G8h1e8NJFttM21H9nVgkg==",
+  "dgSpecHash": "MP3Q+CFtqlDSyrFRZvUZqzE5FFpSUpgpTAE30T4yekSTDJcFe41X2nwP2WyaDDuwOyYC/VYY6FqybtYkzgsUSw==",
   "success": true,
-  "projectFilePath": "/home/ertan/code/PersonalProjects/CHashtag/RazorPages/Hubtofy/Hubtofy.csproj",
+  "projectFilePath": "/home/ertan/code/PersonalProjects/CHashtag/RazorPages/Hubtofy/src/Hubtofy.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

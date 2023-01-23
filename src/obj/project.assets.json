@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ertan/code/PersonalProjects/CHashtag/RazorPages/Hubtofy/Hubtofy.csproj",
+      "projectUniqueName": "/home/ertan/code/PersonalProjects/CHashtag/RazorPages/Hubtofy/src/Hubtofy.csproj",
       "projectName": "Hubtofy",
-      "projectPath": "/home/ertan/code/PersonalProjects/CHashtag/RazorPages/Hubtofy/Hubtofy.csproj",
+      "projectPath": "/home/ertan/code/PersonalProjects/CHashtag/RazorPages/Hubtofy/src/Hubtofy.csproj",
       "packagesPath": "/home/ertan/.nuget/packages/",
-      "outputPath": "/home/ertan/code/PersonalProjects/CHashtag/RazorPages/Hubtofy/obj/",
+      "outputPath": "/home/ertan/code/PersonalProjects/CHashtag/RazorPages/Hubtofy/src/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/ertan/.nuget/NuGet/NuGet.Config"
