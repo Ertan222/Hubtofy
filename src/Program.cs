@@ -1,7 +1,18 @@
+using src.Configuration;
+using src.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+// MongoDbSettings
+builder.Services.Configure<MongoGenreSettings>(builder.Configuration.GetSection("MongoDb:Genre"));
+//
+
+// Mongo Services
+builder.Services.AddSingleton<IGenreMongoService, GenreMongoService>();
+//
 
 var app = builder.Build();
 
