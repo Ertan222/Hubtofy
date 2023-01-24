@@ -13,7 +13,7 @@ public class IndexModel : PageModel
         _genreMongoService = genreMongoService;
     }
 
-    public List<Genre>? AllGenres { get; set; }
+    public List<Genre> AllGenres { get; set; }
     public async Task OnGetAsync()
     {
         List<Genre> allGenres = await _genreMongoService.GetAllGenres();
@@ -21,7 +21,7 @@ public class IndexModel : PageModel
     }
 
     [BindProperty]
-    public Genre? Genre { get; set; }
+    public Genre Genre { get; set; }
     public async Task<IActionResult> OnPostCreateAsync() {
         
         if (ModelState.IsValid)
