@@ -1,7 +1,11 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using src.Models;
 using src.Services;
+
+namespace src.Pages.Genres;
 
 public class IndexModel : PageModel
 {
@@ -19,18 +23,13 @@ public class IndexModel : PageModel
         List<Genre> allGenres = await _genreMongoService.GetAllGenres();
         AllGenres = allGenres.Count is not 0 ? allGenres : null;
     }
-
-    [BindProperty]
-    public Genre? Genre { get; set; }
-    public async Task<IActionResult> OnPostCreateAsync() {
         
-        if (ModelState.IsValid)
+    public async Task OnPostDeleteAsync(string id) {
+        if (id is not null)
         {
-            await _genreMongoService.AddGenre(Genre);
-            return RedirectToPage("./Index");
+            await _genreMongoService.DeleteGenre(id);
         }
-
-        return RedirectToPage("./Index");
+        ModelState.AddModelError("","There is no item to delete");
     }
 
     // Dummy //
