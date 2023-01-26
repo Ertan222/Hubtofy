@@ -12,7 +12,7 @@ public interface IGenreMongoService
     Task<Genre> GetGenreById(string id);
     Task AddGenre(Genre genre);
     Task DeleteGenre(string id);
-    Task UpdateGenre(string id, Genre genre);
+    Task UpdateGenre(Genre genre);
     Task InsertDummyData();
     Task DeleteDummyData();
 }

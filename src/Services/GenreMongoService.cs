@@ -23,7 +23,7 @@ public class GenreMongoService : IGenreMongoService
     public async Task<Genre> GetGenreById(string id) => await _genreCollection.FindAsync<Genre>(a => a.Id == id).Result.FirstOrDefaultAsync();
     public async Task AddGenre(Genre genre) => await _genreCollection.InsertOneAsync(genre); 
     public async Task DeleteGenre(string id) => await _genreCollection.DeleteOneAsync<Genre>(a => a.Id == id);
-    public async Task UpdateGenre(string id, Genre genre) => await _genreCollection.ReplaceOneAsync<Genre>(a => a.Id == id, genre);
+    public async Task UpdateGenre(Genre genre) => await _genreCollection.ReplaceOneAsync<Genre>(a => a.Id == genre.Id, genre);
 
     // Seed Data Methods/Functions //
     public async Task InsertDummyData() => await _genreCollection.InsertManyAsync(DummyGenres); 
