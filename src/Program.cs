@@ -7,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 // MongoDbSettings
+builder.Services.Configure<HubtofyMongoDbSettings>(builder.Configuration.GetSection("Mongodb:HubtofyGeneral"));
 builder.Services.Configure<MongoGenreSettings>(builder.Configuration.GetSection("MongoDb:Genre"));
 //
-
 // Mongo Services
 builder.Services.AddSingleton<IGenreMongoService, GenreMongoService>();
 //

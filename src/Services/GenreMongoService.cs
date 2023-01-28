@@ -13,10 +13,10 @@ public class GenreMongoService : IGenreMongoService
 {
     private readonly IMongoCollection<Genre> _genreCollection;
 
-    public GenreMongoService(IOptions<MongoGenreSettings> mongoGenreSettings)
+    public GenreMongoService(IOptions<MongoGenreSettings> mongoGenreSettings, IOptions<HubtofyMongoDbSettings> hubtofyMongoDbSettings)
     {
-        var client = new MongoClient(mongoGenreSettings.Value.ConnectionString);
-        var database = client.GetDatabase(mongoGenreSettings.Value.Database);
+        var client = new MongoClient(hubtofyMongoDbSettings.Value.ConnectionString);
+        var database = client.GetDatabase(hubtofyMongoDbSettings.Value.Database);
         _genreCollection = database.GetCollection<Genre>(mongoGenreSettings.Value.Collection);
     }
     public async Task<List<Genre>> GetAllGenres() => await _genreCollection.FindAsync<Genre>(_=> true).Result.ToListAsync();
