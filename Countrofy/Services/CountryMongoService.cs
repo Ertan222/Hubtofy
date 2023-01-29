@@ -21,7 +21,7 @@ public class CountryMongoService : ICountryMongoService
 
     public Task<List<Country>> GetAll() => _countryCollection.FindAsync<Country>(_ => true).Result.ToListAsync();
     public Task<Country> GetById(string id) => _countryCollection.FindAsync<Country>(a => a.Id == id).Result.FirstOrDefaultAsync();
-    public Task Add(Country country) => _countryCollection.InsertOneAsync(country);
+    public Task Create(Country country) => _countryCollection.InsertOneAsync(country);
     public Task Delete(string id) => _countryCollection.DeleteOneAsync<Country>(a => a.Id == id);
     public Task Update(Country country) => _countryCollection.ReplaceOneAsync<Country>(a => a.Id == country.Id, country);
     

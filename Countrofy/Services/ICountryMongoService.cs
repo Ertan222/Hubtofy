@@ -11,7 +11,7 @@ public interface ICountryMongoService
     
     Task<List<Country>> GetAll();
     Task<Country> GetById(string id);
-    Task Add(Country country);
+    Task Create(Country country);
     Task Delete(string id);
     Task Update(Country country);
     Task AddAllCountries();
