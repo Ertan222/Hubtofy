@@ -38,10 +38,7 @@ public class CountriesController : ControllerBase
         {
             Country country = new(
                 "",
-                createOrUpdateCountryDTO.Name,
-                createOrUpdateCountryDTO.Population,
-                createOrUpdateCountryDTO.LandArea,
-                createOrUpdateCountryDTO.Density
+                createOrUpdateCountryDTO.Name
             );
             await _countryMongoService.Add(country);
             return CreatedAtAction(nameof(Add),country);
@@ -59,14 +56,17 @@ public class CountriesController : ControllerBase
         if(ModelState.IsValid) {
             Country country = new(
                 id,
-                createOrUpdateCountryDTO.Name,
-                createOrUpdateCountryDTO.Population,
-                createOrUpdateCountryDTO.LandArea,
-                createOrUpdateCountryDTO.Density
+                createOrUpdateCountryDTO.Name
             );
             await _countryMongoService.Update(country);
         return NoContent();
         }
         return BadRequest();
+    }
+
+    [HttpPost("AddAllCountries")]
+    public async Task<IActionResult> AddAllCountries() {
+        await _countryMongoService.AddAllCountries();
+        return Ok();
     }
 }

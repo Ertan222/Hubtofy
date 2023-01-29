@@ -14,4 +14,5 @@ public interface ICountryMongoService
     Task Add(Country country);
     Task Delete(string id);
     Task Update(Country country);
+    Task AddAllCountries();
 }

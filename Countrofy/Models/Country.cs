@@ -9,18 +9,16 @@ namespace Countrofy.Models;
 
 public class Country
 {
+    public Country()
+    {
+    }
+
     public Country(
         string id,
-        string name,
-        long population,
-        int landArea,
-        int density)
+        string name)
     {
         Id = id;
         Name = name;
-        Population = population;
-        LandArea = landArea;
-        Density = density;
     }
     
     [BsonId]
@@ -28,10 +26,4 @@ public class Country
     public string Id { get; set; }
     [BsonElement("name")]
     public string Name { get; set; }
-    [BsonElement("population")]
-    public long Population { get; set; }
-    [BsonElement("land_area")]
-    public int LandArea { get; set; }
-    [BsonElement("density")]
-    public int Density{ get; set; }
 }
