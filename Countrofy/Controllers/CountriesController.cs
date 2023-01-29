@@ -40,7 +40,7 @@ public class CountriesController : ControllerBase
                 "",
                 createOrUpdateCountryDTO.Name
             );
-            await _countryMongoService.Add(country);
+            await _countryMongoService.Create(country);
             return CreatedAtAction(nameof(Add),country);
         }
         return BadRequest();
