@@ -15,7 +15,7 @@
 
 # Code of Conduct :heart:
 
-Hubtoy have a CoC. Can be find [here](./LICENSE)
+Hubtofy have a CoC. Can be find [here](./LICENSE)
 
 # License 📄
 
