@@ -1,0 +1,42 @@
+@page "{handler?}"
+
+@model CreateModel
+
+<form method="post">
+  <fieldset>
+    <legend>Create</legend>
+  <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+            <label for="crt-lb-name" class="mb-2 fs-5 fw-bold">Name</label>
+            <input type="text" id="crt-lb-name" class="form-control" asp-for="Label.Name">
+          </div>
+          <div class="form-group">
+            <label for="crt-lb-parent" class="mb-2 fs-5 fw-bold">Parent</label>
+            <input type="text" id="crt-lb-parent" class="form-control" asp-for="Label.Parent">
+          </div>
+          <div class="form-group">
+            <label for="crt-lb-founded" class="mb-2 fs-5 fw-bold">Founded</label>
+            <input type="date" id="crt-lb-founded" class="form-control" asp-for="Label.Founded">
+          </div>
+          <div class="form-group">
+            <label for="crt-lb-country-of-origin" class="mb-2 fs-5 fw-bold">Country Of Origin</label>
+            <select type="" id="crt-lb-country-of-origin" class="form-select" asp-for="Label.CountryOfOrigin">
+                <option value="0">Select a country...</option>
+                @foreach (Country country in Model.Countries)
+                {
+                    <option value="@country.Id">@country.Name</option>
+                }
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="crt-lb-location" class="mb-2 fs-5 fw-bold">Location</label>
+            <input type="text" id="crt-lb-location" class="form-control" asp-for="Label.Location">
+          </div>
+          <div class="form-group">
+            <label for="crt-lb-website" class="mb-2 fs-5 fw-bold">Website</label>
+            <input type="text" id="crt-lb-website" class="form-control" asp-for="Label.Website">
+          </div>
+          <button type="submit" class="btn btn-primary mt-2" asp-page-handler="create">Create</button>
+          <a type="submit" class="btn btn-primary mt-2" asp-page="./Index">Back to list</a>
+    </fieldset>
+</form>

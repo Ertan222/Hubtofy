@@ -1,0 +1,48 @@
+@model IndexModel
+
+<div class="modal fade" id="updateLabelModal" tabindex="-1" aria-labelledby="updateLabelModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Update</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post">
+        <fieldset>
+          <div class="form-group">
+            <label for="upt-lb-name" class="mb-2 fs-5 fw-bold">Name</label>
+            <input type="text" id="uinputt-lb-name" class="fw-normal">
+          </div>
+          <div class="form-group">
+            <label for="upt-lb-parent" class="mb-2 fs-5 fw-bold">Parent</label>
+            <input type="text" id="upt-lb-parent" class="fw-normal">
+          </div>
+          <div class="form-group">
+            <label for="upt-lb-founded" class="mb-2 fs-5 fw-bold">Founded</label>
+            <input type="date" id="upt-lb-founded" class="fw-normal">
+          </div>
+          <div class="form-group">
+            <label for="upt-lb-country-of-origin" class="mb-2 fs-5 fw-bold">Country Of Origin</label>
+            <p id="upt-lb-country-of-origin" class="fw-normal">
+          </div>
+          <div class="form-group">
+            <label for="upt-lb-location" class="mb-2 fs-5 fw-bold">Location</label>
+            <p id="upt-lb-location" class="fw-normal"></p>
+          </div>
+          <div class="form-group">
+            <label for="upt-lb-website" class="mb-2 fs-5 fw-bold">Website</label>
+            <p id="upt-lb-website" class="fw-normal"></p>
+          </div>
+        </fieldset>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Update</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

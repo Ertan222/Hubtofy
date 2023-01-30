@@ -9,10 +9,13 @@ builder.Services.AddRazorPages();
 // MongoDbSettings
 builder.Services.Configure<HubtofyMongoDbSettings>(builder.Configuration.GetSection("Mongodb:HubtofyGeneral"));
 builder.Services.Configure<MongoGenreSettings>(builder.Configuration.GetSection("MongoDb:Genre"));
+builder.Services.Configure<MongoLabelSettings>(builder.Configuration.GetSection("MongoDb:Label"));
 //
 // Mongo Services
 builder.Services.AddSingleton<IGenreMongoService, GenreMongoService>();
+builder.Services.AddSingleton<ILabelMongoService, LabelMongoService>();
 //
+
 
 var app = builder.Build();
 

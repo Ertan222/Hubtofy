@@ -1,0 +1,49 @@
+@model IndexModel
+
+<div class="modal fade" id="detailLabelModal" tabindex="-1" aria-labelledby="detailLabelModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Detail</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <fieldset>
+          <div class="form-group">
+            <label for="dtl-lb-id" class="mb-2 fs-5 fw-bold">Id</label>
+            <p id="dtl-lb-id" class="fw-normal"></p>
+          </div>
+          <div class="form-group">
+            <label for="dtl-lb-name" class="mb-2 fs-5 fw-bold">Name</label>
+            <p id="dtl-lb-name" class="fw-normal"></p>
+          </div>
+          <div class="form-group">
+            <label for="dtl-lb-parent" class="mb-2 fs-5 fw-bold">Parent</label>
+            <p id="dtl-lb-parent" class="fw-normal"></p>
+          </div>
+          <div class="form-group">
+            <label for="dtl-lb-founded" class="mb-2 fs-5 fw-bold">Founded</label>
+            <p id="dtl-lb-founded" class="fw-normal"></p>
+          </div>
+          <div class="form-group">
+            <label for="dtl-lb-country-of-origin" class="mb-2 fs-5 fw-bold">Country Of Origin</label>
+            <p id="dtl-lb-country-of-origin" class="fw-normal"></p>
+          </div>
+          <div class="form-group">
+            <label for="dtl-lb-location" class="mb-2 fs-5 fw-bold">Location</label>
+            <p id="dtl-lb-location" class="fw-normal"></p>
+          </div>
+          <div class="form-group">
+            <label for="dtl-lb-website" class="mb-2 fs-5 fw-bold">Website</label>
+            <!a id="dtl-lb-website" href="" class="fw-normal">Click</a>
+          </div>
+        </fieldset>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

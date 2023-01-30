@@ -1,0 +1,41 @@
+@page "{handler?}"
+@model UpdateModel
+
+<form method="post">
+  <fieldset>
+    <legend>Update</legend>
+  <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+            <label for="updt-lb-name" class="mb-2 fs-5 fw-bold">Name</label>
+            <input type="text" id="updt-lb-name" class="form-control" asp-for="Label.Name">
+          </div>
+          <div class="form-group">
+            <label for="updt-lb-parent" class="mb-2 fs-5 fw-bold">Parent</label>
+            <input type="text" id="updt-lb-parent" class="form-control" asp-for="Label.Parent">
+          </div>
+          <div class="form-group">
+            <label for="updt-lb-founded" class="mb-2 fs-5 fw-bold">Founded</label>
+            <input type="date" id="updt-lb-founded" class="form-control" asp-for="Label.Founded">
+          </div>
+          <div class="form-group">
+            <label for="updt-lb-country-of-origin" class="mb-2 fs-5 fw-bold">Country Of Origin</label>
+            <select type="" id="updt-lb-country-of-origin" class="form-select" asp-for="Label.CountryOfOrigin">
+                <option value="0">Select a country...</option>
+                @foreach (Country country in Model.Countries)
+                {
+                    <option value="@country.Name">@country.Name</option>
+                }
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="updt-lb-location" class="mb-2 fs-5 fw-bold">Location</label>
+            <input type="text" id="updt-lb-location" class="form-control" asp-for="Label.Location">
+          </div>
+          <div class="form-group">
+            <label for="updt-lb-website" class="mb-2 fs-5 fw-bold">Website</label>
+            <input type="text" id="updt-lb-website" class="form-control" asp-for="Label.Website">
+          </div>
+          <button type="submit" class="btn btn-primary mt-2" asp-page-handler="update" asp-route-id="@Model.Label.Id">Update</button>
+          <a type="submit" class="btn btn-primary mt-2" asp-page="./Index">Back to list</a>
+    </fieldset>
+</form>

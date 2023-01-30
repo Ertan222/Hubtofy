@@ -12,7 +12,7 @@ namespace src.Services;
 public class GenreMongoService : IGenreMongoService
 {
     private readonly IMongoCollection<Genre> _genreCollection;
-
+    
     public GenreMongoService(IOptions<MongoGenreSettings> mongoGenreSettings, IOptions<HubtofyMongoDbSettings> hubtofyMongoDbSettings)
     {
         var client = new MongoClient(hubtofyMongoDbSettings.Value.ConnectionString);
